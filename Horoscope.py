@@ -90,7 +90,7 @@ class Horoscope:
 
 
 
-array = [
+signs = [
     'aries',
     'pisces',
     'leo',
@@ -106,14 +106,14 @@ array = [
 ]
 x = 0
 
-for sign in array:
+for sign in signs:
     print(str(x) + " - " + sign)
     x += 1
 
 signe = input("What is your star sign ?\n")
 type(signe)
 
-Horoscope.getRandomHoroscope(array[int(signe)])
+Horoscope.getRandomHoroscope(signs[int(signe)])
 
 
 
