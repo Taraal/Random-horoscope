@@ -47,7 +47,6 @@ class Horoscope:
         url = "https://www.astroyogi.com/horoscopes/daily/" + signe + "-free-horoscope.aspx"
         response = requests.get(url)
         tree = html.fromstring(response.content)
-        print(tree)
         horoscope = str(tree.xpath(
             "//*[@id=\"today1\"]/p[1]/span/text()"))
         
@@ -79,7 +78,6 @@ class Horoscope:
     @staticmethod
     def getRandomHoroscope(signe):
         sentences = Horoscope.tokenizeFullHoroscope(signe)
-        print(sentences)
         intList = list(range(0, len(sentences)-1))
         random.shuffle(intList)
         newHoroscope = ""
